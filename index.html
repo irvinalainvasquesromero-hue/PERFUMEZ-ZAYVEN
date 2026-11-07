@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZAYVÉN PERFUMES | Tu esencia, tus reglas</title>
+<meta name="description" content="Descubre el catálogo de ZAYVÉN PERFUMES. Tu esencia, tus reglas.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #080807;
+    --black-soft: #10100e;
+    --gold: #d6b779;
+    --gold-light: #f0dca9;
+    --white: #f7f2e9;
+    --gray: #aaa49a;
+    --line: rgba(214,183,121,.23);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.topbar {
+    background: var(--gold);
+    color: var(--black);
+    text-align: center;
+    padding: 10px 12px;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+}
+
+header {
+    min-height: 92px;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(8,8,7,.97);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 37px;
+    line-height: 1;
+    letter-spacing: 5px;
+}
+
+.brand-subtitle {
+    display: block;
+    color: var(--white);
+    font-size: 9px;
+    letter-spacing: 6px;
+    margin-top: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #ddd5c8;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    transition: color .3s;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.header-note {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.hero {
+    min-height: 590px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,8,7,.99) 0%,
+            rgba(8,8,7,.91) 35%,
+            rgba(8,8,7,.45) 67%,
+            rgba(8,8,7,.18) 100%
+        ),
+        url('https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1800&q=85')
+        center 48% / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 570px;
+    position: relative;
+    z-index: 1;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(62px, 8vw, 100px);
+    font-weight: 400;
+    line-height: .91;
+    letter-spacing: -1px;
+    margin: 27px 0;
+}
+
+.hero h1 em {
+    color: var(--gold);
+    font-weight: 400;
+}
+
+.hero p {
+    max-width: 390px;
+    color: #d0c9bd;
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+.gold-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 32px;
+    padding: 16px 23px;
+    background: var(--gold);
+    color: #100e09;
+    border: 1px solid var(--gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: .3s;
+}
+
+.gold-button:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.hero-caption {
+    position: absolute;
+    right: 7%;
+    bottom: 35px;
+    color: #d4c6a7;
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.intro {
+    padding: 70px 8% 60px;
+    text-align: center;
+}
+
+.intro h2,
+.catalog-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 54px);
+    font-weight: 400;
+}
+
+.intro p {
+    max-width: 550px;
+    margin: 15px auto 0;
+    color: var(--gray);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 20px;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+.ornament::before,
+.ornament::after {
+    content: "";
+    width: 35px;
+    height: 1px;
+    background: var(--gold);
+    opacity: .65;
+}
+
+.catalog {
+    padding: 45px 7% 100px;
+    background:
+        radial-gradient(ellipse at top, rgba(104,78,37,.09), transparent 60%),
+        var(--black);
+}
+
+.catalog-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.catalog-heading .eyebrow {
+    margin-bottom: 14px;
+}
+
+.catalog-heading p {
+    margin-top: 12px;
+    color: var(--gray);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.category-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--gray);
+    padding: 12px 28px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(214, 183, 121, 0.05);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 23px;
+}
+
+.product {
+    min-width: 0;
+    overflow: hidden;
+    background: linear-gradient(180deg, #151511, #0d0d0b);
+    border: 1px solid #302a20;
+    transition: transform .35s, border-color .35s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+    border-color: #a98b50;
+}
+
+.product-image {
+    height: 320px;
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    padding: 10px;
+    transition: transform .6s;
+}
+
+/* PRODUCTOS AGOTADOS */
+
+.etiqueta-agotado {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #c62828;
+    color: #ffffff;
+    padding: 9px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+    z-index: 5;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+}
+
+.mensaje-agotado {
+    color: #e45b5b;
+    font-size: 9px;
+    font-weight: 600;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.product.agotado .product-image img {
+    filter: grayscale(35%);
+}
+
+.product:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 23px 15px 24px;
+    text-align: center;
+}
+
+.product-brand {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.product h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.1;
+    font-weight: 500;
+    margin: 11px 0;
+}
+
+.product-description {
+    color: var(--gray);
+    font-size: 10px;
+    line-height: 1.8;
+    min-height: 36px;
+}
+
+.product-divider {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    margin: 17px auto;
+    opacity: .7;
+}
+
+.product-price {
+    color: var(--gold-light);
+    font-size: 16px;
+    letter-spacing: .5px;
+}
+
+.product-size {
+    margin-top: 9px;
+    color: #8f897e;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.closing {
+    position: relative;
+    padding: 75px 20px;
+    text-align: center;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background:
+        linear-gradient(rgba(8,8,7,.84), rgba(8,8,7,.92)),
+        url('https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=1600&q=85')
+        center / cover;
+}
+
+.closing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(36px, 5vw, 55px);
+}
+
+.closing p {
+    margin-top: 16px;
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 24px;
+}
+
+footer {
+    padding: 50px 7% 25px;
+    text-align: center;
+}
+
+.footer-brand {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+
+.footer-subtitle {
+    margin-top: 4px;
+    font-size: 9px;
+    letter-spacing: 6px;
+}
+
+.footer-slogan {
+    margin-top: 18px;
+    color: #d2c7b5;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-style: italic;
+}
+
+.footer-copy {
+    border-top: 1px solid var(--line);
+    margin-top: 35px;
+    padding-top: 22px;
+    color: #81796d;
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+    header {
+        padding: 20px 4%;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    .header-note {
+        display: none;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .product-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        font-size: 8px;
+        letter-spacing: 1.4px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 22px 4%;
+    }
+
+    .brand-name {
+        font-size: 34px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 60px 7%;
+        background-position: 58% center;
+    }
+
+    .hero h1 {
+        font-size: 67px;
+    }
+
+    .hero p {
+        max-width: 300px;
+    }
+
+    .hero-caption {
+        right: 7%;
+        bottom: 18px;
+        font-size: 8px;
+    }
+
+    .intro {
+        padding: 55px 7% 40px;
+    }
+
+    .catalog {
+        padding: 35px 4% 65px;
+    }
+
+    .catalog-heading h2 {
+        font-size: 40px;
+    }
+
+    .category-filters {
+        gap: 8px;
+    }
+
+    .filter-btn {
+        padding: 10px 14px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .products {
+        gap: 10px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+    .product-info {
+        padding: 17px 8px 19px;
+    }
+
+    .product h3 {
+        font-size: 20px;
+    }
+
+    .product-brand {
+        font-size: 8px;
+        letter-spacing: 1.3px;
+    }
+
+    .product-description {
+        font-size: 9px;
+    }
+
+    .product-price {
+        font-size: 13px;
+    }
+
+    .product-size {
+        font-size: 8px;
+    }
+
+    .closing {
+        padding: 60px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    DESCUBRE TU AROMA · ZAYVÉN PERFUMES
+</div>
+
+<header>
+    <a href="#inicio" class="brand">
+        <div class="brand-name">ZAYVÉN</div>
+        <span class="brand-subtitle">PERFUMES</span>
+    </a>
+
+    <nav>
+        <a href="#inicio">INICIO</a>
+        <a onclick="filtrar('todos')">CATÁLOGO</a>
+        <a onclick="filtrar('mujer')">DAMA</a>
+        <a onclick="filtrar('hombre')">CABALLERO</a>
+        <a href="#marca">LA MARCA</a>
+    </nav>
+
+    <div class="header-note">TU ESENCIA, TUS REGLAS</div>
+</header>
+
+<main>
+
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="eyebrow">ZAYVÉN PERFUMES</div>
+
+            <h1>Tu esencia,<br><em>tus reglas.</em></h1>
+
+            <p>
+                Cada aroma cuenta una historia.
+                Encuentra esa fragancia que conecta contigo,
+                expresa tu personalidad y deja una impresión inolvidable.
+            </p>
+
+            <a href="#catalogo" class="gold-button">
+                DESCUBRIR PERFUMES <span>↗</span>
+            </a>
+        </div>
+
+        <div class="hero-caption">UNA FRAGANCIA · UNA IDENTIDAD</div>
+    </section>
+
+    <section class="intro" id="marca">
+        <div class="ornament">EL ARTE DE LA ESENCIA</div>
+
+        <h2>Encuentra tu sello personal.</h2>
+
+        <p>
+            Bienvenido a ZAYVÉN PERFUMES, un espacio para descubrir
+            aromas que se adaptan a tu estilo. Explora nuestra selección
+            y encuentra tu próxima fragancia favorita.
+        </p>
+    </section>
+
+    <section class="catalog" id="catalogo">
+
+        <div class="catalog-heading">
+            <div class="eyebrow">NUESTRA SELECCIÓN</div>
+            <h2>Catálogo de perfumes</h2>
+            <p>Descubre cada fragancia de nuestra colección.</p>
+        </div>
+
+        <div class="category-filters">
+            <button class="filter-btn active" id="btn-todos" onclick="filtrar('todos')">TODOS</button>
+            <button class="filter-btn" id="btn-mujer" onclick="filtrar('mujer')">DAMA</button>
+            <button class="filter-btn" id="btn-hombre" onclick="filtrar('hombre')">CABALLERO</button>
+        </div>
+
+        <div class="products" id="products"></div>
+
+    </section>
+
+    <section class="closing">
+        <div class="ornament">ZAYVÉN PERFUMES</div>
+        <h2>El aroma que habla por ti.</h2>
+        <p>Tu esencia, tus reglas.</p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-brand">ZAYVÉN</div>
+    <div class="footer-subtitle">PERFUMES</div>
+    <div class="footer-slogan">Tu esencia, tus reglas.</div>
+
+    <div class="footer-copy">
+        © 2026 ZAYVÉN PERFUMES · TODOS LOS DERECHOS RESERVADOS
+    </div>
+</footer>
+
+<script>
+const perfumes = [
+
+    // COLECCIÓN DAMA
+
+    {
+        nombre: "J'oVial",
+        marca: "J'adore Dior (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Elegancia floral con destellos dorados y femeninos.",
+        imagen: "./img/1.jpeg"
+    },
+    {
+        nombre: "Cloud",
+        marca: "Ariana Grande (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Notas dulces de lavanda, coco y praliné envolvente.",
+        imagen: "./img/2.jpeg"
+    },
+    {
+        nombre: "Hér Pour Femme",
+        marca: "Burberry Her (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Un festín de frutos rojos con un fondo amaderado moderno.",
+        imagen: "./img/3.jpeg"
+    },
+    {
+        nombre: "Must Be Pink Bear",
+        marca: "Moschino Toy 2 Bubble Gum (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Divertido, dulce y vibrante con matices frutales.",
+        imagen: "./img/4.jpeg"
+    },
+    {
+        nombre: "Legend For Her",
+        marca: "Montblanc Legend Pour Femme (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Sofisticada mezcla de azahar, jazmín y maderas blancas.",
+        imagen: "./img/5.jpeg"
+    },
+    {
+        nombre: "Flower Bloom Pink",
+        marca: "Gucci Bloom (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Ramo floral fresco e intenso de nardos y jazmín.",
+        imagen: "./img/6.jpeg"
+    },
+    {
+        nombre: "Love U",
+        marca: "Ralph Lauren Romance (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Fragancia romántica con rosas, lirios y un toque cálido.",
+        imagen: "./img/7.jpeg"
+    },
+    {
+        nombre: "Moon Girl",
+        marca: "Ariana Grande Moonlight (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Aroma hipnótico con grosella negra, malvavisco y peonía.",
+        imagen: "./img/8.jpeg",
+        agotado: true
+    },
+    {
+        nombre: "Princess",
+        marca: "Carolina Herrera Good Girl (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Sensual combinación de haba tonka, cacao y jazmín.",
+        imagen: "./img/9.jpeg"
+    },
+    {
+        nombre: "Holy Ween",
+        marca: "Halloween Perfumes (Inspiración)",
+        categoria: "mujer",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Misterioso aroma floral violeta con matices marinos.",
+        imagen: "./img/10.jpeg"
+    },
+
+    // COLECCIÓN CABALLERO
+
+    {
+        nombre: "Hero",
+        marca: "Burberry Hero (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Sutil mezcla de bergamota y trío de maderas de cedro.",
+        imagen: "./img/11.jpg"
+    },
+    {
+        nombre: "Eros Gold",
+        marca: "Versace Eros (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Menta fresca, manzana verde y haba tonka envolvente.",
+        imagen: "./img/12.jpg"
+    },
+    {
+        nombre: "Forever",
+        marca: "Dolce & Gabbana Light Blue Forever (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Frescura cítrica e intensa con toronja y notas marinas.",
+        imagen: "./img/13.jpg"
+    },
+    {
+        nombre: "Prime Number 1",
+        marca: "Paco Rabanne 1 Million Elixir (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Manzana silvestre, rosa de damasco y vainilla intensa.",
+        imagen: "./img/14.jpg"
+    },
+    {
+        nombre: "Eros Flame",
+        marca: "Versace Eros Flame (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Cítricos especiados, pimienta negra y maderas cálidas.",
+        imagen: "./img/15.jpg"
+    },
+    {
+        nombre: "OK Cool",
+        marca: "Calvin Klein CK One / Eternity (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Fragancia limpia, fresca y ligera con notas verdes.",
+        imagen: "./img/16.jpg"
+    },
+    {
+        nombre: "Yes Great Man",
+        marca: "Yves Saint Laurent Y (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Fresco, amaderado y vibrante con matices de bergamota.",
+        imagen: "./img/17.jpg"
+    },
+    {
+        nombre: "Robot",
+        marca: "Paco Rabanne Phantom (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Aroma futurista con notas de lavanda, limón y vainilla.",
+        imagen: "./img/18.jpg"
+    },
+    {
+        nombre: "1 Lucky",
+        marca: "Paco Rabanne 1 Million Lucky (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "100 ML",
+        descripcion: "Avellana, ciruela y maderas ambaradas para un estilo audaz.",
+        imagen: "./img/19.jpg"
+    },
+    {
+        nombre: "Savage Extrait",
+        marca: "Dior Sauvage Elixir (Inspiración)",
+        categoria: "hombre",
+        precio: "$180",
+        tamano: "110 ML",
+        descripcion: "Intenso y especiado con canela, nuez moscada y maderas nobles.",
+        imagen: "./img/20.jpg"
+    }
+];
+
+const contenedor = document.getElementById("products");
+
+function mostrarPerfumes(lista) {
+    if (!contenedor) {
+        console.error("No se encontró el elemento con id products.");
+        return;
+    }
+
+    contenedor.innerHTML = lista.map((perfume, indice) => `
+        <article class="product ${perfume.agotado ? 'agotado' : ''}">
+
+            <div class="product-image">
+                <img
+                    src="${perfume.imagen}"
+                    alt="Fotografía de ${perfume.nombre}"
+                    loading="${indice < 4 ? "eager" : "lazy"}"
+                    onerror="this.onerror=null; this.src='https://placehold.co/400x400/eeeeee/333333?text=Imagen+no+disponible';"
+                >
+
+                ${perfume.agotado ? `
+                    <div class="etiqueta-agotado">AGOTADO</div>
+                ` : ""}
+            </div>
+
+            <div class="product-info">
+                <div class="product-brand">${perfume.marca}</div>
+
+                <h3>${perfume.nombre}</h3>
+
+                <p class="product-description">
+                    ${perfume.descripcion}
+                </p>
+
+                <div class="product-divider"></div>
+
+                <div class="product-price">
+                    ${perfume.precio} MXN
+                </div>
+
+                <div class="product-size">
+                    ${perfume.tamano}
+                </div>
+
+                ${perfume.agotado ? `
+                    <p class="mensaje-agotado">
+                        Actualmente sin existencias
+                    </p>
+                ` : ""}
+            </div>
+
+        </article>
+    `).join("");
+}
+
+function filtrar(categoria) {
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+
+    const btnActivo = document.getElementById(`btn-${categoria}`);
+
+    if (btnActivo) {
+        btnActivo.classList.add('active');
+    }
+
+    if (categoria === 'todos') {
+        mostrarPerfumes(perfumes);
+    } else {
+        const filtrados = perfumes.filter(p => p.categoria === categoria);
+        mostrarPerfumes(filtrados);
+    }
+}
+
+mostrarPerfumes(perfumes);
+</script>
+
+</body>
+</html>
