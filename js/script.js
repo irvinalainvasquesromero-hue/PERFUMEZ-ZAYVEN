@@ -180,12 +180,13 @@ const perfumes = [
     },
     {
         nombre: "Savage Extrait",
-        marca: "Dior Sauvage Elixir (Inspiración)",
-        categoria: "hombre",
-        precio: "$180",
-        tamano: "110 ML",
-        descripcion: "Intenso y especiado con canela, nuez moscada y maderas nobles.",
-        imagen: "./img/20.jpg"
+    marca: "Dior Sauvage Elixir (Inspiración)",
+    categoria: "hombre",
+    precio: "$180",
+    tamano: "110 ML",
+    descripcion: "Intenso y especiado con canela, nuez moscada y maderas nobles.",
+    imagen: "./img/20.jpg",
+    agotado: true
     }
 ];
 
