@@ -106,7 +106,7 @@ const perfumes = [
         tamano: "100 ML",
         descripcion: "Sutil mezcla de bergamota y trío de maderas de cedro.",
         imagen: "./img/11.jpg",
-         agotado: true
+        
     },
     {
         nombre: "Eros Gold",
@@ -124,7 +124,8 @@ const perfumes = [
         precio: "$180",
         tamano: "100 ML",
         descripcion: "Frescura cítrica e intensa con toronja y notas marinas.",
-        imagen: "./img/13.jpg"
+        imagen: "./img/13.jpg",
+           agotado: true
     },
     {
         nombre: "Prime Number 1",
@@ -152,7 +153,7 @@ const perfumes = [
         tamano: "100 ML",
         descripcion: "Fragancia limpia, fresca y ligera con notas verdes.",
         imagen: "./img/16.jpg",
-         agotado: true
+        
     },
     {
         nombre: "Yes Great Man",
@@ -161,7 +162,8 @@ const perfumes = [
         precio: "$180",
         tamano: "100 ML",
         descripcion: "Fresco, amaderado y vibrante con matices de bergamota.",
-        imagen: "./img/17.jpg"
+        imagen: "./img/17.jpg",
+           agotado: true
     },
     {
         nombre: "Robot",
